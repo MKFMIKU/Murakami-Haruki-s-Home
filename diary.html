@@ -4,7 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Murakami Haruki's diary</title>
 	<link rel="stylesheet" href="style.css">
-	<script src="js/notie.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.transit.min.js"></script>
 </head>
 <body>
 	<div id="diary">
@@ -36,7 +37,12 @@
 		</div>
 	</div>
 	<script>
-		
+		$(function(){ 
+　　			$('.time_content').transition({ 
+  perspective: '500px', 
+  rotateX: 360
+});
+		}); 
 	</script>
 </body>
 </html>

@@ -329,12 +329,12 @@ table{
 	width: 100%;
 	margin: auto auto;
 	height: 100%;
-	background: -webkit-linear-gradient(top,#68DEC2,#DBE4AE);
-	background: -moz-linear-gradient( top,#68DEC2,#DBE4AE);
+	background: -webkit-linear-gradient(top,#65A797,#A0A58A);
+	background: -moz-linear-gradient( top,#65A797,#A0A58A);
 }
 
 #write{
-	background-color: #A0D4C7;
+	background-color: #C1C1C1;;
 	width: 480px;
 	height: 240px;
 	top: 100px;
@@ -427,7 +427,7 @@ table{
 
 #book_read{
 	width: 72%;
-	height: 100%;
+	height: 98%;
 	padding: 4%;
 	z-index: 999;
 	top: 45px;
@@ -440,4 +440,12 @@ table{
 #back{
 	font-size: 2em;
 	color: #fff;
+}
+
+#push{
+	padding: 10px;
+	width: 76%;
+	margin: auto auto;
+	background-color: rgba(121, 113, 113, 0.9);
+	cursor:pointer;
 }
