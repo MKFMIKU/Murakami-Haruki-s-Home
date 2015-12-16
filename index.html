@@ -21,7 +21,7 @@
 		<span>---《挪威的森林》</span>
 		<ul>
 			<li><a href="#" id="turn"><p>下个经典</p></a></li>
-			<li><a href="book.html"><p>阅读记录</p></a></li>
+			<li><a href="book.html"><p>图书目录</p></a></li>
 			<li><a href="diary.html"><p>生活杂谈</p></a></li>
 			<li><a href="profile.html"><p>关于村上</p></a></li>
 		</ul>
@@ -155,6 +155,7 @@
 		}
 		$('#back').click(function(){
 			$('#book_read').css("display","none");
+			$('.book_map h1').html("已经阅读");
 		});
 		$('#push').click(function(){
 			$('#right').transition({ 

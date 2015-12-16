@@ -8,10 +8,16 @@
 	<script src="js/jquery.transit.min.js"></script>
 </head>
 <body>
+	<div id="nav">
+		<h1><a href="index.html">BiliBook</a><span>吐槽图书，吐槽故事</span></h1>
+	</div>
 	<div id="diary">
 		<div id="write">
 			<h2>记录...</h2>
-			<div id="put" contenteditable="true"></div>
+			<div id="put" contenteditable="true">
+				写下一段生活，写下一段人生。
+				<p id="write_push">提交</p>
+			</div>
 		</div>
 		<div id="timeline">
 			<div id="time_t">
@@ -21,7 +27,7 @@
 					<div class="point"></div>
 					<span id="time">2015-12-3&nbsp;&nbsp;<span id="hour">10:40</span></span>
 					<br>
-					<p>你要做一个不动声色的大人了。不准情绪化，不准偷偷想念，不准回头看。去过自己另外的生活。你要听话，不是所有的鱼都会生活在同一片海里。
+					<p id="write_add">你要做一个不动声色的大人了。不准情绪化，不准偷偷想念，不准回头看。去过自己另外的生活。你要听话，不是所有的鱼都会生活在同一片海里。
 </p>
 				</div>
 			</div>
@@ -39,10 +45,22 @@
 	<script>
 		$(function(){ 
 　　			$('.time_content').transition({ 
-  perspective: '500px', 
-  rotateX: 360
-});
+  				perspective: '500px', 
+  				rotateX: 360
+			});
 		}); 
+		$('#write_push').click(function(){
+			$('#write').transition({ x: 100, delay: 0 }) 
+  .transition({ x: 0 },function(){
+	  		$('.time_content').transition({ 
+  				perspective: '500px', 
+  				rotateX: 0
+			},function(){
+				$('#write_add').html($('#put').html());
+			});
+  });
+			
+		});
 	</script>
 </body>
 </html>
