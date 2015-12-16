@@ -5,6 +5,53 @@ html,body{
 	overflow: hidden;
 	font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
 }
+#nav{
+	z-index: 20;
+	width: 100%;
+	height: 45px;	
+	background: #0767c8;
+    background: -webkit-linear-gradient(top,#086ed5,#055db5);
+    background: linear-gradient(to bottom,#086ed5,#055db5);
+    border-bottom: 1px solid #044e97;
+    box-shadow: 0 1px 2px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.15);	
+}
+#content{
+	height: 100%;
+	width: 100%;
+	background-color: #E2E2E2;
+}
+#left{
+	box-shadow: 3px 0 6px rgba(0,0,0,0.3);
+	width: 24%;
+	height: 100%;
+	text-align: center;
+	display: inline-block;
+	float: left;
+	background-color: #C3C3C3;
+}
+#mid{
+	height: 100%;
+	width: 48%;
+	background-color: #E2E2E2;
+	display: inline-block;
+}
+
+#right{
+	float: right;
+	height: 100%;
+	text-align: center;
+	width: 28%;
+	background-image: url("images/rBG.jpg");
+}
+#nav h1{
+	margin: 0;
+	padding-left: 4%;
+	color: #E2E2E2;
+}
+#nav span{
+	margin-left: 3rem;
+	font-size: 0.4rem;
+}
 a{
 	text-decoration: none;
 }
@@ -21,38 +68,17 @@ li p {
     font-size: 18px;
     word-break: break-all;
 }
+
 ul{
 	list-style: none;
 	width: 330px;
 	position: absolute;
 	display: inline-block;
 	vertical-align: text-top;
-	bottom: 16%;
+	bottom: 24%;
 	padding-left: 20px;
 	left: 0;
 	clear: both;
-}
-#load{
-	position: absolute;
-	width: 100%;
-	top: 20%;
-	text-align: center;
-}
-
-#load img{
-	width: 200px;
-}
-
-#load h2{
-	color: #ccc;
-}
-
-#left{
-	width: 24%;
-	height: 100%;
-	text-align: center;
-	display: inline-block;
-	background-color: #C3C3C3;
 }
 
 #left img{
@@ -60,7 +86,35 @@ ul{
 	width: 160px;
 	height: 160px;
 	border-radius: 50%;
+	box-shadow: 0 0 4.8rem black;
+	-webkit-animation: nucleus 2s infinite linear;
+    -moz-animation: nucleus 2s infinite linear;
 }
+
+@-webkit-keyframes nucleus {
+    0% {
+        box-shadow: 0 0 0 transparent;
+    }
+    50% {
+        box-shadow: 0 0 4.8rem black;
+    }
+    100% {
+        box-shadow: 0 0 0 transparent;
+    }
+}
+
+@-moz-keyframes nucleus {
+    0% {
+        box-shadow: 0 0 0 transparent;
+    }
+    50% {
+        box-shadow: 0 0 4.8rem black;
+    }
+    100% {
+        box-shadow: 0 0 0 transparent;
+    }
+}
+
 #left span{
 	float: right;
 	margin-right: 10px;
@@ -88,35 +142,16 @@ ul{
     word-break: break-all;
 	color: #383838;
 }
-#mid{
-	height: 100%;
-	width: 48%;
-	background-color: #E2E2E2;
-	position: absolute;
-	top: 0;
-	left: 24%;
-	display: inline-block;
-	/*text-align: center;*/
-}
 
-#right{
-	position: absolute;
-	left: 72%;
-	height: 100%;
-	top: 0;
-	text-align: center;
-	width: 28%;
-	background-image: url("images/rBG.jpg");
-}
 
 .book{
-	margin: 3%;
+	margin: 2%;
 	width: 82%;
 	background-color: #ccc;
-	height: 300px;
-	
+	height: 300px;	
+	opacity: 0;
+	cursor:pointer;
 }
-
 .book_cover{
 	width: 140px;
     max-height: 186px;
@@ -127,18 +162,9 @@ ul{
     -webkit-box-shadow: 2px 2px 9px 0 rgba(0,0,0,.2);
     -moz-box-shadow: 2px 2px 9px 0 rgba(0,0,0,.2);
     box-shadow: 2px 2px 9px 0 rgba(0,0,0,.2);
-	left: 8%;
-	margin-top: 4%;
-	position: absolute;
-	-webkit-transition-timing-function: ease-in-out;
-    transition-timing-function: ease-in-out;
-	transition-duration: 0.8s;			
-}
-
-.book_cover:hover{
-	width: 175px;
-    max-height: 233px;
-    _height: 233px;
+	float: left;
+	margin-left: 1rem;
+	margin-top: 1rem;		
 }
 
 .book h3{
@@ -157,11 +183,21 @@ ul{
 	border-left: 2px solid;
 } 
 
+.book_map{
+	text-align: center;
+	margin-left: 10%;
+	background-color: #E6E1E1;
+	border-radius: 20px;
+	width: 240px;
+	position: absolute;
+	height: 80px;
+	opacity: 0;
+}
+
 #r_input{
 	margin: 2%;
 	width: 100%;
 	bottom: 0;
-	position: absolute;
 }
 
 #r_input h2{
@@ -288,17 +324,6 @@ table{
 	margin: auto;
 }
 
-#head_img{
-	-webkit-animation: run 12s linear 0s infinite;
-}
-
-@-webkit-keyframes run{
-  from{
-    -webkit-transform: rotate(0deg); 
-  }to{
-    -webkit-transform: rotate(360deg);
-  }
-}
 
 #diary{
 	width: 100%;
@@ -398,4 +423,21 @@ table{
 #hour {
     font-size: 12px;
     color: #92CADE;
+}
+
+#book_read{
+	width: 72%;
+	height: 100%;
+	padding: 4%;
+	z-index: 999;
+	top: 45px;
+	background-color: #ccc;
+	position: absolute;	
+	opacity: 0;
+	display: none;
+}
+
+#back{
+	font-size: 2em;
+	color: #fff;
 }
