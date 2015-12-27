@@ -106,8 +106,8 @@
 	</div>
 	<script>
 		$(function(){ 
-　　			$('#left').transition({ x: 50}).transition({ x: 0 }); 
-  			$('.book').transition({opacity: 1,delay: 480});
+　　		    $('#left').transition({ x: 100}).transition({ x: 0 }); 
+  	         $('.book').transition({opacity: 1,delay: 480});
 		}); 
 		
 		$('#turn').click(function(){
@@ -138,20 +138,20 @@
 		function read1(){
 			$('#book1').transition({ 
   				rotateY: 360,
-				complete: function(){
+            },function(){
 					$('#book_read').css("display","block");
 					$('#book_read').transition({opacity: 1});
 				}
-			});
+			);
 		}
 		function read2(){
 			$('#book2').transition({ 
   				rotateY: 360,
-				complete: function(){
+            },function(){
 					$('#book_read').css("display","block");
 					$('#book_read').transition({opacity: 1});
 				}
-			});
+			);
 		}
 		$('#back').click(function(){
 			$('#book_read').css("display","none");
@@ -160,7 +160,6 @@
 		$('#push').click(function(){
 			$('#right').transition({ 
 				perspective: '500px', 
-  				rotateX: 360, 
   				rotateY: 360 },function(){
 					  $('#push').html("已经提交");
 				  });

@@ -5,12 +5,16 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 <meta name="viewport" content="width=device-width, initial-scale=1"> 
 <title>Murakami Haruki's Book</title>
+<script src="js/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
 	<div id="nav_menu">
 		<h1>BiliBook<span>吐槽图书，吐槽故事</span></h1>
 		<h2>图书目录</h2>
+        <div id="book_menu_content">
+            
+        </div>
 	</div>
 		<div class="container demo-1">
 			<div class="content">
@@ -22,9 +26,17 @@
 				</div>
 			</div>
 		</div>
+        
 		<script src="js/TweenLite.min.js"></script>
 		<script src="js/EasePack.min.js"></script>
 		<script src="js/rAF.js"></script>
 		<script src="js/demo-1.js"></script>
-	</body>
+        <script>
+            $('tr').mouseover(function(){
+                $('#book_menu_content').html($(this).html()); 
+            });
+            
+            
+        </script> 
+    </body>
 </html>
