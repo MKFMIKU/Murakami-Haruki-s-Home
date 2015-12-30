@@ -37,6 +37,7 @@ html,body{
 }
 
 #right{
+    opacity: 0;
 	float: right;
 	height: 100%;
 	text-align: center;
