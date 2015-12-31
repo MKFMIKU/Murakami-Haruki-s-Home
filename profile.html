@@ -4,10 +4,12 @@
 	<meta charset="UTF-8">
 	<title>About Murakami Haruki</title>
 	<link rel="stylesheet" href="style.css">
+    <script src="js/jquery.min.js"></script>
+	<script src="js/jquery.transit.min.js"></script>
 </head>
 <body>
 	<div id="nav">
-		<h1><a href="index.html">BiliBook</a><span>吐槽图书，吐槽故事</span></h1>
+		<h1><a href="index.html">BiliBook<span>吐槽图书，吐槽故事</span></a></h1>
 	</div>
 	<div id="about">
 		<h1>村上春树 （日本著名作家）</h1>
@@ -24,6 +26,10 @@
 ：“我生在关西长在关西，父亲村上千秋是京都一和尚之子，母亲村上美幸是船场一商家之女，可说是百分之百的关西种。受家庭熏陶，村上春树非常喜欢读书。</p>
 		<p>1961年4月，入芦屋市立精道初级中学校就读，然而这位读书少年却不是个爱学习的好学生，进入中学后，村上常因不用功而挨老师的打。后来他承认当时自己内心相当叛逆，“不想学的、没兴趣的东西，再怎么样都不学”。读高中后村上的逆反心理更严重了，整日和女生厮混，抽烟、逃课，用中国的话说就是个“问题少年”。但村上的文学素养很高，他经常在校刊上发表文章，还翻译自己喜欢的美国惊悚小说。也就是在这段时间里，村上疯狂地迷上了爵士乐，常常饿着肚子将午餐钱省下来买唱片———他对爵士乐的痴迷一直延续到了今天。</p>
 	</div>
-    
+    <script>
+        $(function(){ 
+　　		  $('p').transition({ x: 50 ,delay: 150 }) 
+		}); 
+    </script>
 </body>
 </html>

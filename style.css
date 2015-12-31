@@ -54,8 +54,10 @@ html,body{
 	font-size: 0.4rem;
 }
 a{
+    display: block;
 	text-decoration: none;
 }
+
 li{
 	height: 50px;
 	float: left;
@@ -124,6 +126,10 @@ ul{
 	color: #6F6F6F;
 	font-style: italic;
 	margin: 20px;
+}
+
+#left p:hover{
+	color: #00A7B9;
 }
 
 #left h2{
@@ -256,6 +262,7 @@ ul{
 	position: absolute;
 	right: 4%;
 	top: 16%;
+    
 }
 
 #about_bg{
